@@ -1,0 +1,119 @@
+/*definindo variáveis facilita a manutenção do projeto (não esquecer dos dosi pontos antes do "root"*/
+:root{
+    --vermelho:#e50914;
+    --preta:#141414;
+}
+/*fazendo reset de CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*elemantos base*/
+/*alterando o corpo*/
+body{
+    background-color: var(--preta);
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+header .container{
+    /* cria uma flexbox é uma forma de alinhar os elementos em tela*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*alterando a logo*/
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+/*alterando estilo do menu de navegação*/
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;    
+}
+
+/*criando evendo para alterar a cor do iten sobreposto pelo mouse no menu de navegação*/
+header nav a:hover{
+    color:#fff;
+}
+
+/*Filme principal*/
+.filme-principal{
+    font-size: 16px;
+    /*"linear-gradient" cria uma camada visual para destacar o cunteúdo escrito da iamgem de fundo*/
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('/img/capa-house.jpg');
+
+    height: 400px;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 90px;
+}
+
+.titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;     
+}
+
+
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    
+    /*padding lida com o espaço interno dos elementos 
+    passando 1 valor ele lida com todas as direções
+    passando 2 varores o primeiro é as direções veritcais
+    e o segundo as direções horzontais
+    4 valores sege a ordem: cima-direita-baixo-esquerda*/
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    
+    cursor: pointer;
+    /*propriedade de transição entre animações*/
+    transition: .3s ease all;
+}
+/*altera as cores do botão quando o mouse sobrepoe os botões*/
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    /*limita a largura maxima do container*/
+    width: 70%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 5px;
+}
